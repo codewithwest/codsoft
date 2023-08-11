@@ -67,7 +67,8 @@ buttons.forEach(btn => {
             calculate(math_tracker)
         }
         else if (signs.includes(btn_val)) {
-            if (!signs.includes(math_tracker[math_tracker.length - 1])) {
+
+            if (!signs.includes(math_tracker[math_tracker.length - 1]) && output.textContent.trim().length > 0) {
                 math_tracker.push(btn_val)
                 output.textContent += btn_val
             }

@@ -8,30 +8,83 @@
   </head>
   <body>
     <div class="main">
-      <div class="intro">1</div>
+      <div class="history">
+        <div class="header">
+          <h4>History</h4><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+            </svg>
+          </a>
+        </div>
+        
+        <div class="data"></div>
+        
+      </div>
       <div class="calc">
+        
         <div class="exp-displayer"></div>
+        <button class="back-space">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+          </svg>
+        </button>
         <div class="buttons">
-          <button class="functional-btns">C</button>
-          <button class="functional-btns">x2</button>
-          <button class="functional-btns">root</button>
-          <button class="functional-btns">/</button>
-          <button class="functional-btns">7</button>
-          <button class="functional-btns">8</button>
-          <button class="functional-btns">9</button>
-          <button class="functional-btns">*</button>
-          <button class="functional-btns">5</button>
-          <button class="functional-btns">5</button>
-          <button class="functional-btns">6</button>
-          <button class="functional-btns">-</button>
-          <button class="functional-btns">1</button>
-          <button class="functional-btns">2</button>
-          <button class="functional-btns">3</button>
-          <button class="functional-btns">+</button>
-          <button class="functional-btns">%</button>
-          <button class="functional-btns">0</button>
-          <button class="functional-btns">.</button>
-          <button class="functional-btns">=</button>
+          <button class="functional-btns" id="clear">C</button>
+          <button class="functional-btns" id="root">x2</button>
+          <button class="functional-btns" id="**">X^<sup>x</sup></button>
+          <button class="functional-btns" id="/">
+            
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-lg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+          </svg>
+          </button>
+          <button class="functional-btns" id="7">7</button>
+          <button class="functional-btns" id="8">8</button>
+          <button class="functional-btns" id="9">9</button>
+          <button class="functional-btns" id="*">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <button class="functional-btns" id="4">4</button>
+          <button class="functional-btns" id="5">5</button>
+          <button class="functional-btns" id="6">6</button>
+          <button class="functional-btns" id="-">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash"
+              viewBox="0 0 16 16">
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+            </svg>
+          </button>
+          <button class="functional-btns" id="1">1</button>
+          <button class="functional-btns" id="2">2</button>
+          <button class="functional-btns" id="3">3</button>
+          <button class="functional-btns" id="+">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+              viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+            </svg>
+          </button>
+          <button class="functional-btns" id="%">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+            </svg>
+          </button>
+          <button class="functional-btns" id="0">0</button>
+          <button class="functional-btns" id=".">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+              viewBox="0 0 16 16">
+              <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            </svg>
+          </button>
+          <button class="functional-btns" id="=">=</button>
         </div>
       </div>
     </div>

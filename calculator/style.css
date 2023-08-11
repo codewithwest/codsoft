@@ -4,28 +4,77 @@
 }
 
 .main{
-    background: linear-gradient( rgba(142, 147, 3, 0.844) 35%, rgba(42, 42, 33, 0.844) 50%), rgba(42, 42, 33, 0.844);   
+    
+     background: rgb(99, 96, 96);
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
 }
-.intro, .calc{
-    padding: 10px;
-    border-radius: 10px;
-    float: 1 0 250px;
+
+.history{
+    height: 100%;
+    font-size: 23px;
+    flex: 1 0 150px;
     display: flex;
     flex-direction: column;
 }
+.history>.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}
+.history>.header>a{
+    align-self: flex-end;
+    margin-right: 50px;
+}
+.history>.data{
+    height: 100%;
+    text-overflow: clip;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.history>.data:hover{
+    overflow-y: auto;
+}
+.history>.data>p{
+    color: rgb(81, 14, 129);
+    margin-right: 50px;
+    text-align: end;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 5px rgb(236, 59, 177);
+}
+.history>.data>h3 {
+    text-align: end;
+    margin-right: 50px;
+    color: rgb(183, 255, 0);
+    text-shadow: 1px 1px 5px rgb(204, 161, 190);
+}
+ .calc{
+    flex: 1 0 250px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -2px -2px 5px rgba(142, 147, 3, 0.844);
+}
 .calc>.exp-displayer{
+    border: 1px solid;
+    display: flex;
     align-items: center;
     font-size: 42px;
     padding: 10px;
     color: rgb(110, 4, 96);
-    box-shadow: 2px -2px  rgba(35, 35, 32, 0.844),  -2px 0 rgba(82, 84, 23, 0.844);
+    box-shadow: -.5px -.5px  rgba(35, 35, 32, 0.844),  -2px 0 rgba(82, 84, 23, 0.844);
     border-radius: 10px;
     height: 20%;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
 }
 .calc>.buttons{
     padding: 5px;
@@ -34,7 +83,9 @@
     height: 90%;
     border-radius: 10px;
     gap: 5px;
+    
 }
+
 .calc>.buttons>button{
     display: flex;
     align-items: center;
@@ -46,4 +97,42 @@
     font-weight: bolder;
     background: none;
     font-size: large;
+}
+.calc>.back-space{
+    position: absolute;
+    margin: 15px 10px;
+    padding: 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    background: rgb(99, 96, 96);
+    border: none;
+    color: aliceblue;
+    font-size: 20px;
+    box-shadow: 1px 1px 2px rgb(183, 255, 0);
+    align-self: flex-end;
+}
+.main svg{
+    width: 25px;
+    height: 25px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(142, 147, 3, 0.844);
+    border-radius: 5px;
 }
